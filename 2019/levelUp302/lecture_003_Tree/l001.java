@@ -200,16 +200,16 @@ public class l001 {
         }
 
         boolean leftDone = lowestCommonAncestor_02(root.left, p, q);
-        if (LCANode != null) return true;
+        if (LCANode != null) return true;// EK BAAR ROOT MIL GYA TOH LEFT MAI MAT JAO dont waste call sidha return hojayao
 
         boolean rightDone = lowestCommonAncestor_02(root.right, p, q);
-        if (LCANode != null) return true;
+        if (LCANode != null) return true;// EK BAAR ROOT MIL GYA TOH LEFT MAI MAT JAO dont waste call sidha return hojayao
 
-        if ((selfDone && leftDone) || (selfDone && rightDone) || (leftDone && rightDone))
+        if ((selfDone && leftDone) || (selfDone && rightDone) || (leftDone && rightDone))//3 branch wala case 
             LCANode = root;
 
 
-        return selfDone || leftDone || rightDone;
+        return selfDone || leftDone || rightDone;//koi bhi call agr true hn yani potential lca khi pa avalable hn toh true bhej do
     }
 
     public static void kDown(Node root, int level, Node blockNode) {
