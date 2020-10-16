@@ -333,8 +333,8 @@ public class l001 {
         diaPair lr = diameter_02(node.left); // left result
         diaPair rr = diameter_02(node.right); // right result
 
-        diaPair myRes = new diaPair(0, -1);
-        myRes.dia = Math.max(Math.max(lr.dia, rr.dia), (lr.hei + rr.hei + 2));
+        diaPair myRes = new diaPair(0, -1);/////new variable isliya bnata hn because hama kuch variable chahiya jiska andr apna result store krAKAKA SEND KR SAKA
+        myRes.dia = Math.max(Math.max(lr.dia, rr.dia), (lr.hei + rr.hei + 2));//BINA STORE KRAYA KASA KRO GA RETURN;
         myRes.hei = Math.max(lr.hei, rr.hei) + 1;
 
         return myRes;
